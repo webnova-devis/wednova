@@ -1,61 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Merci – WebNova</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Styles spécifiques (légers) pour la page merci */
-    .thanks-wrap {
-      max-width: 900px;
-      margin: 140px auto 80px;
-      background: #fff;
-      border-radius: 18px;
-      padding: 50px 30px;
-      text-align: center;
-      box-shadow: 0 14px 40px rgba(0,0,0,.08);
-      animation: popin .6s ease forwards;
-    }
-    .thanks-title {
-      font-size: 2.2rem;
-      color: #007bff;
-      margin-bottom: 10px;
-      letter-spacing: .5px;
-    }
-    .thanks-sub {
-      color: #486581;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
-    .thanks-card {
-      background: linear-gradient(135deg,#007bff,#00bcd4);
-      color: #fff;
-      border-radius: 14px;
-      padding: 24px 18px;
-      margin: 18px auto 28px;
-      max-width: 700px;
-      box-shadow: 0 10px 28px rgba(0,123,255,.25);
-    }
-    .thanks-actions {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-    @keyframes popin {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci - WebNova</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header (identique pour la cohérence visuelle) -->
+<!-- 🧭 HEADER -->
 <header>
   <div class="header-container">
-    <img src="images/logo.png" alt="Logo WebNova" class="logo" />
+    <img src="images/logo.png" alt="Logo WebNova" class="logo">
     <h1>WebNova</h1>
   </div>
   <nav>
@@ -70,23 +26,26 @@
   </nav>
 </header>
 
-<section class="thanks-wrap fade-in">
-  <h2 class="thanks-title">Merci pour votre message 💙</h2>
-  <p class="thanks-sub">Nous l’avons bien reçu. Nous revenons vers vous très vite (généralement sous 24h ouvrées).</p>
-
-  <div class="thanks-card">
-    <p style="margin:0; font-size:1.05rem;">
-      En attendant, vous pouvez consulter nos <strong>services</strong> et nos <strong>tarifs</strong> :
-    </p>
-  </div>
-
-  <div class="thanks-actions">
-    <a class="btn" href="services.html">Découvrir les services</a>
-    <a class="btn" href="tarifs.html">Voir les tarifs</a>
-    <a class="btn" href="index.html">Retour à l’accueil</a>
+<!-- 🎉 PAGE MERCI -->
+<section class="hero-banner small-banner">
+  <div class="banner-text">
+    <h2>Merci pour votre message 💙</h2>
+    <p>Nous avons bien reçu votre demande et vous répondrons dans les plus brefs délais.</p>
+    <a href="index.html" class="btn">Retour à l'accueil</a>
   </div>
 </section>
 
+<section id="hero" class="fade-in">
+  <h2>Votre projet est entre de bonnes mains</h2>
+  <p>
+    Chez <strong>WebNova</strong>, chaque client est unique.  
+    Nous mettons tout en œuvre pour donner vie à vos idées digitales  
+    avec des solutions modernes, rapides et sur mesure.
+  </p>
+  <a href="services.html" class="btn">Découvrir nos services</a>
+</section>
+
+<!-- 🦶 FOOTER -->
 <footer>
   <p>&copy; 2025 WebNova - Tous droits réservés</p>
 </footer>

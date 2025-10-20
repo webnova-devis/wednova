@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - WebNova</title>
+  <title>Contact - WebNova | Création de Sites Web Professionnels</title>
+  <meta name="description" content="Contactez WebNova pour la création de sites modernes, rapides et sur mesure. Nous vous accompagnons dans tous vos projets digitaux.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- 🧭 HEADER -->
 <header>
   <div class="header-container">
     <img src="images/logo.png" alt="Logo WebNova" class="logo">
@@ -25,51 +27,56 @@
   </nav>
 </header>
 
+<!-- 🌆 BANNIÈRE -->
 <section class="hero-banner small-banner">
   <div class="banner-text">
     <h2>Contactez WebNova</h2>
-    <p>Créons ensemble votre projet digital</p>
+    <p>Créons ensemble votre projet digital sur mesure</p>
   </div>
 </section>
 
+<!-- 💬 FORMULAIRE DE CONTACT -->
 <section class="contact-page fade-in">
   <div class="contact-wrapper">
-
+    
+    <!-- 📨 FORMULAIRE -->
     <div class="contact-form">
-      <h3>💌 Envoyez-nous un message</h3>
-      <p>Un projet, une idée, une question ? Écrivez-nous :</p>
-
-      <form action="https://formspree.io/f/mldpkdgz" method="POST" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre e-mail" required>
-        <input type="text" name="subject" placeholder="Sujet" required>
-        <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
-        <input type="file" name="upload" accept=".jpg,.png,.pdf,.doc,.docx,.zip">
-        <!-- Redirection optionnelle après envoi :
-        <input type="hidden" name="_next" value="https://webnova-devis.github.io/wednova/merci.html"> -->
-        <button type="submit" class="btn">Envoyer</button>
+      <h3>💬 Envoyez-nous un message</h3>
+      <p>Vous avez un projet, une idée ou une question ? Remplissez le formulaire ci-dessous, nous reviendrons vers vous rapidement.</p>
+      
+      <form action="https://formspree.io/f/mldpkdgz" method="POST" target="_blank" onsubmit="window.location='merci.html'; return false;">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+        <input type="text" name="sujet" placeholder="Sujet du message" required>
+        <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer le message</button>
       </form>
     </div>
 
+    <!-- 📍 INFOS DE CONTACT -->
     <div class="contact-info">
       <h3>📞 Nos coordonnées</h3>
       <ul>
         <li><strong>Adresse :</strong> 83220 Le Pradet, France</li>
-        <li><strong>Tél. :</strong> 07 66 61 72 64</li>
+        <li><strong>Téléphone :</strong> 06 18 07 01 62</li>
         <li><strong>Email :</strong> webnova83@gmail.com</li>
-        <li><strong>Horaires :</strong> Lun–Ven : 08h–19h</li>
+        <li><strong>Horaires :</strong> Lundi - Vendredi | 09h00 - 18h00</li>
       </ul>
 
       <div class="map">
         <iframe 
           src="https://www.google.com/maps?q=Le+Pradet+83220&output=embed"
-          width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          width="100%" height="250"
+          style="border:0; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);"
+          allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- 🦶 FOOTER -->
 <footer>
   <p>&copy; 2025 WebNova - Tous droits réservés</p>
 </footer>
