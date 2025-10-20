@@ -17,9 +17,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// === ANIMATION D’APPARITION DES ÉLÉMENTS (fade-in) ===
+// === ANIMATIONS AU SCROLL (fade-in) ===
 const fadeElements = document.querySelectorAll('.fade-in, .value-card, .project, .tarif-card');
-
 const fadeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -28,16 +27,4 @@ const fadeObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.2 });
-
 fadeElements.forEach(el => fadeObserver.observe(el));
-
-// === ANIMATION CARTE AU HOVER ===
-document.querySelectorAll('.project, .tarif-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    card.style.transform = 'translateY(-8px) scale(1.02)';
-    card.style.transition = 'all 0.3s ease';
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'translateY(0) scale(1)';
-  });
-});

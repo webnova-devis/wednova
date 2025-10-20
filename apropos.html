@@ -5,124 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos - WebNova</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* === STYLE SPÉCIAL PAGE À PROPOS === */
-
-    .about-section {
-      padding: 120px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-      animation: fadeInUp 1.2s ease forwards;
-    }
-
-    .about-section h2 {
-      font-size: 2.5rem;
-      color: #007bff;
-      margin-bottom: 25px;
-      letter-spacing: 1px;
-      position: relative;
-    }
-
-    .about-section h2::after {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #007bff, #00bcd4);
-      margin: 15px auto 40px;
-      border-radius: 10px;
-    }
-
-    .about-section p {
-      font-size: 1.15rem;
-      color: #34495e;
-      line-height: 1.8;
-      max-width: 850px;
-      margin: 0 auto 30px;
-    }
-
-    .about-values {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 50px;
-    }
-
-    .value-card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-      transition: all 0.4s ease;
-      border-top: 5px solid #007bff;
-    }
-
-    .value-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-      border-top-color: #00bcd4;
-    }
-
-    .value-card h3 {
-      color: #007bff;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    .value-card p {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .about-call {
-      margin-top: 70px;
-      background: linear-gradient(135deg, #007bff, #00bcd4);
-      color: white;
-      padding: 60px 20px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      animation: fadeInUp 1.5s ease forwards;
-    }
-
-    .about-call h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .about-call p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .about-section h2 {
-        font-size: 2rem;
-      }
-      .about-section p {
-        font-size: 1rem;
-      }
-      .about-call h3 {
-        font-size: 1.7rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
-<!-- 🌐 HEADER -->
 <header>
   <div class="header-container">
     <img src="images/logo.png" alt="Logo WebNova" class="logo">
@@ -131,16 +16,15 @@
   <nav>
     <ul>
       <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html" class="active">À propos</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="projets.html">Projets</a></li>
       <li><a href="tarifs.html">Tarifs</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="apropos.html" class="active">À propos</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- 🖼️ BANNIÈRE -->
 <section class="hero-banner small-banner">
   <div class="banner-text">
     <h2>À propos de WebNova</h2>
@@ -148,41 +32,29 @@
   </div>
 </section>
 
-<!-- 💼 CONTENU PRINCIPAL -->
 <section class="about-section fade-in">
   <h2>Qui sommes-nous ?</h2>
   <p>
-    <strong>WebNova</strong> est un studio de création numérique spécialisé dans la conception de <strong>sites web professionnels</strong>, performants et élégants.  
-    Notre mission : vous aider à bâtir une identité digitale forte et cohérente, adaptée à vos objectifs et à votre image.
+    <strong>WebNova</strong> est un studio de création numérique spécialisé dans les <strong>sites web professionnels</strong>. 
+    Notre mission : vous aider à bâtir une identité digitale forte, élégante et performante.
   </p>
   <p>
-    Nous combinons design, performance et stratégie pour offrir des solutions web modernes, claires et efficaces.  
-    Chaque détail est pensé pour assurer une expérience fluide et intuitive à vos visiteurs.
+    Nous allions design, performance et stratégie pour créer des expériences claires, efficaces et durables.
   </p>
 
   <div class="about-values">
-    <div class="value-card">
-      <h3>🎨 Design sur mesure</h3>
-      <p>Des interfaces modernes et esthétiques qui reflètent votre marque et vos valeurs.</p>
-    </div>
-    <div class="value-card">
-      <h3>⚙️ Performance</h3>
-      <p>Des sites rapides, optimisés et bien référencés pour garantir une présence efficace sur le web.</p>
-    </div>
-    <div class="value-card">
-      <h3>🤝 Accompagnement</h3>
-      <p>Un suivi personnalisé du premier contact jusqu’à la mise en ligne de votre projet.</p>
-    </div>
+    <div class="value-card"><h3>🎨 Design sur mesure</h3><p>Des interfaces modernes et esthétiques, fidèles à votre marque.</p></div>
+    <div class="value-card"><h3>⚙️ Performance</h3><p>Sites rapides, propres, pensés pour le SEO et l’accessibilité.</p></div>
+    <div class="value-card"><h3>🤝 Accompagnement</h3><p>Un suivi personnalisé, du brief à la mise en ligne.</p></div>
   </div>
 
   <div class="about-call">
     <h3>Prêt à lancer votre projet ?</h3>
-    <p>Contactez-nous dès aujourd’hui et donnons vie à votre site web sur mesure.</p>
+    <p>Contactez-nous et donnons vie à votre site sur mesure.</p>
     <a href="contact.html" class="btn">Discutons ensemble</a>
   </div>
 </section>
 
-<!-- 🔻 FOOTER -->
 <footer>
   <p>&copy; 2025 WebNova - Tous droits réservés</p>
 </footer>
