@@ -1,4 +1,4 @@
-// === Effet zoom sur la bannière ===
+// === EFFET ZOOM SUR LA BANNIÈRE ===
 window.addEventListener('scroll', () => {
   const banner = document.querySelector('.banner-img');
   const scroll = window.scrollY;
@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// === Header transparent → bleu au scroll ===
+// === HEADER TRANSPARENT → BLEU AU SCROLL ===
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   if (window.scrollY > 50) {
@@ -17,8 +17,9 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// === Animation d’apparition (fade-in) ===
-const fadeElements = document.querySelectorAll('.fade-in, .section-fade');
+// === ANIMATION D’APPARITION DES ÉLÉMENTS (fade-in) ===
+const fadeElements = document.querySelectorAll('.fade-in, .value-card, .project, .tarif-card');
+
 const fadeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -30,9 +31,13 @@ const fadeObserver = new IntersectionObserver(entries => {
 
 fadeElements.forEach(el => fadeObserver.observe(el));
 
-// === Animation des cartes (services, projets, tarifs) ===
-const cards = document.querySelectorAll('.project, .tarif-card');
-cards.forEach(card => {
-  card.classList.add('card-fade');
-  fadeObserver.observe(card);
+// === ANIMATION CARTE AU HOVER ===
+document.querySelectorAll('.project, .tarif-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = 'translateY(-8px) scale(1.02)';
+    card.style.transition = 'all 0.3s ease';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0) scale(1)';
+  });
 });

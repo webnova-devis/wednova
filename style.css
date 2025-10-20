@@ -421,3 +421,48 @@ footer {
     font-size: 1.1rem;
   }
 }
+/* === Animations d’apparition au scroll === */
+.fade-in, .value-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible, .value-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === VERSION MOBILE (moins de 600px) === */
+@media (max-width: 600px) {
+  body {
+    padding-top: 80px; /* espace sous le header */
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: rgba(0, 123, 255, 0.95);
+    padding: 15px 0;
+    border-radius: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about-call {
+    padding: 40px 15px;
+  }
+
+  .banner-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
