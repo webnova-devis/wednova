@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - WebNova</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌐 HEADER -->
+<header>
+  <div class="header-container">
+    <img src="images/logo.png" alt="Logo WebNova" class="logo">
+    <h1>WebNova</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- 🖼️ BANNIÈRE -->
+<section class="hero-banner small-banner">
+  <div class="banner-text">
+    <h2>Contactez WebNova</h2>
+    <p>Créons ensemble votre projet digital sur mesure</p>
+  </div>
+</section>
+
+<!-- 💬 SECTION CONTACT -->
+<section class="contact-page fade-in">
+  <div class="contact-wrapper">
+
+    <!-- Formulaire -->
+    <div class="contact-form">
+      <h3>💌 Envoyez-nous un message</h3>
+      <p>Vous avez un projet, une idée ou une question ? Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.</p>
+      <form action="https://formsubmit.co/webnova83@gmail.com" method="POST">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+        <input type="text" name="sujet" placeholder="Sujet du message" required>
+        <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer le message</button>
+      </form>
+    </div>
+
+    <!-- Informations -->
+    <div class="contact-info">
+      <h3>📞 Nos coordonnées</h3>
+      <ul>
+        <li><strong>Adresse :</strong> 83220 Le Pradet, France</li>
+        <li><strong>Téléphone :</strong> 06 18 07 01 62</li>
+        <li><strong>Email :</strong> webnova83@gmail.com</li>
+        <li><strong>Horaires :</strong> Lun - Ven | 09h00 - 18h00</li>
+      </ul>
+
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps?q=Le+Pradet+83220&output=embed"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🔻 FOOTER -->
+<footer>
+  <p>&copy; 2025 WebNova - Tous droits réservés</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
