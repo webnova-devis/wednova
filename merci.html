@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci - WebNova</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a73e8, #0a4d8c);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .merci-box {
+      background: white;
+      padding: 60px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeInUp 1.2s ease-out;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .checkmark {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      stroke-width: 4;
+      stroke: #1a73e8;
+      stroke-miterlimit: 10;
+      animation: scale 0.6s ease-in-out forwards;
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .checkmark__circle {
+      stroke-dasharray: 166;
+      stroke-dashoffset: 166;
+      stroke-width: 4;
+      stroke-miterlimit: 10;
+      stroke: #1a73e8;
+      fill: none;
+      animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    }
+
+    .checkmark__check {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+    }
+
+    @keyframes stroke {
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @keyframes scale {
+      0%, 100% { transform: none; }
+      50% { transform: scale(1.1); }
+    }
+
+    h1 { color: #1a73e8; }
+    .btn { background: #1a73e8; color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+    .btn:hover { background: #155bb5; transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+  <div class="merci-box">
+    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+      <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+      <path class="checkmark__check" fill="none" stroke="#1a73e8" stroke-width="4" d="M14 27l7 7 16-16"/>
+    </svg>
+
+    <h1>Merci pour votre message !</h1>
+    <p>Nous vous répondrons dans les plus brefs délais 🚀</p>
+    <a href="index.html" class="btn">⬅ Retour à l'accueil</a>
+  </div>
+
+</body>
+</html>

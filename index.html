@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Créateur de Sites Web</title>
+  <title>WebNova - Création de Sites Web Professionnels</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
   </div>
   <nav>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="projets.html">Projets</a></li>
       <li><a href="tarifs.html">Tarifs</a></li>
@@ -24,7 +24,6 @@
   </nav>
 </header>
 
-<!-- 🖼️ BANNIÈRE PRINCIPALE -->
 <section class="hero-banner">
   <img src="images/banner-webnova.png" alt="Bannière WebNova" class="banner-img">
   <div class="banner-text">
@@ -34,82 +33,25 @@
   </div>
 </section>
 
-<!-- 🌐 SECTION PRÉSENTATION -->
-<section id="hero">
+<section id="hero" class="fade-in">
   <h2>Transformez vos idées en sites professionnels</h2>
-  <p>
-    Bienvenue ! Je crée des sites web modernes, rapides et adaptés à tous les écrans.  
-    Que vous soyez une entreprise, un artiste, un blogueur ou un e-commerçant,  
-    je transforme vos projets en expériences digitales uniques et efficaces.
-  </p>
+  <p>Je crée des sites web modernes, rapides et adaptés à tous les écrans. Que vous soyez une entreprise, un artiste ou un e-commerçant, je transforme vos projets en expériences digitales uniques.</p>
   <a href="contact.html" class="btn">Demander un devis</a>
 </section>
 
-<!-- 💡 AVANTAGES -->
-<section id="advantages">
-  <h2>Pourquoi choisir mes services ?</h2>
+<section id="advantages" class="section-fade">
+  <h2>Pourquoi choisir WebNova ?</h2>
   <div class="projects">
-    <div class="project">
-      <h3>Sites sur mesure</h3>
-      <p>Chaque site est conçu selon vos besoins et votre identité visuelle pour se démarquer de vos concurrents.</p>
-    </div>
-    <div class="project">
-      <h3>Responsive & Mobile</h3>
-      <p>Votre site s’adapte automatiquement à tous les écrans : ordinateur, tablette et smartphone.</p>
-    </div>
-    <div class="project">
-      <h3>Optimisation SEO</h3>
-      <p>Je mets en place les bonnes pratiques pour que votre site soit bien référencé sur Google.</p>
-    </div>
-    <div class="project">
-      <h3>Maintenance & Support</h3>
-      <p>Après la livraison, je reste disponible pour les mises à jour, améliorations et assistance.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ⚙️ SERVICES -->
-<section id="quick-services">
-  <h2>Services proposés</h2>
-  <div class="projects">
-    <div class="project">
-      <h3>Site Vitrine</h3>
-      <p>Présentez votre activité en ligne de manière professionnelle et élégante.</p>
-    </div>
-    <div class="project">
-      <h3>Site E-commerce</h3>
-      <p>Boutique en ligne complète avec gestion des produits et paiement sécurisé.</p>
-    </div>
-    <div class="project">
-      <h3>Portfolio / Blog</h3>
-      <p>Montrez vos créations, articles ou projets avec un design moderne et intuitif.</p>
-    </div>
+    <div class="project">💡 <h3>Sites sur mesure</h3><p>Chaque site est conçu selon vos besoins et votre image.</p></div>
+    <div class="project">📱 <h3>Responsive</h3><p>Compatibilité totale sur mobile, tablette et PC.</p></div>
+    <div class="project">🚀 <h3>Optimisé SEO</h3><p>Une visibilité accrue sur Google et les moteurs de recherche.</p></div>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 WebNova Createur Mr Visse Jason  - Tous droits réservés</p>
+  <p>&copy; 2025 WebNova - Tous droits réservés</p>
 </footer>
 
-<!-- 🎬 SCRIPT ANIMATIONS -->
-<script>
-  // === Effet zoom sur la bannière ===
-  window.addEventListener('scroll', function() {
-    const banner = document.querySelector('.banner-img');
-    const scroll = window.scrollY;
-    banner.style.transform = `scale(${1 + scroll / 2000}) translateY(${scroll / 5}px)`;
-  });
-
-  // === Effet header transparent → bleu au scroll ===
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
