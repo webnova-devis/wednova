@@ -1,30 +1,30 @@
-// === EFFET ZOOM SUR LA BANNIÈRE ===
+// === Effet zoom / parallax sur la bannière ===
 window.addEventListener('scroll', () => {
   const banner = document.querySelector('.banner-img');
-  const scroll = window.scrollY;
+  const y = window.scrollY || window.pageYOffset;
   if (banner) {
-    banner.style.transform = `scale(${1 + scroll / 2000}) translateY(${scroll / 5}px)`;
+    const scale = 1 + Math.min(y / 2000, 0.35);
+    banner.style.transform = `scale(${scale}) translateY(${y / 6}px)`;
   }
 });
 
-// === HEADER TRANSPARENT → BLEU AU SCROLL ===
+// === Header transparent -> bleu au scroll ===
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
+  if (!header) return;
+  if (window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
 });
 
-// === ANIMATIONS AU SCROLL (fade-in) ===
-const fadeElements = document.querySelectorAll('.fade-in, .value-card, .project, .tarif-card');
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
+// === Animations d’apparition (fade-in) ===
+const observed = document.querySelectorAll('.fade-in, .value-card, .card, .project, .tarif-card');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
     }
   });
 }, { threshold: 0.2 });
-fadeElements.forEach(el => fadeObserver.observe(el));
+
+observed.forEach(el => io.observe(el));
