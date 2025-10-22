@@ -74,6 +74,19 @@ section { padding:90px 20px; max-width:1200px; margin:auto; }
 .value-card:hover { transform:translateY(-8px); box-shadow:0 15px 36px rgba(0,0,0,.1); border-top-color:#00bcd4; }
 .about-call { margin-top:50px; background:linear-gradient(135deg,#007bff,#00bcd4); color:#fff; padding:50px 20px; border-radius:20px; }
 
+/* SERVICES PAGE */
+.services { text-align:center; padding:100px 20px; }
+.services .intro { max-width:700px; margin:0 auto 50px; font-size:1.1rem; color:#444; }
+.service-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; }
+.service-card {
+  background:#fff; padding:35px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  width:280px; text-align:left; transition: transform .3s ease, box-shadow .3s ease;
+}
+.service-card:hover { transform:translateY(-10px); box-shadow:0 12px 30px rgba(0,0,0,0.12); }
+.service-card h3 { color:#007bff; margin-bottom:15px; }
+.service-card p { color:#555; font-size:.95rem; line-height:1.6; }
+.cta { margin-top:60px; }
+
 /* CONTACT */
 .contact-page { padding:80px 20px; }
 .contact-wrapper { display:flex; flex-wrap:wrap; gap:50px; justify-content:space-between; align-items:flex-start; }
