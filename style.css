@@ -129,39 +129,49 @@ footer { background:#004aad; color:#fff; text-align:center; padding:25px; font-s
   .btn { padding:12px 24px; font-size:.95rem; }
 }
 
-/* 🌐 MENU MOBILE — VERSION FINALE (bleu) */
-.burger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  width: 40px; height: 40px;
-  background: transparent; border: 0; cursor: pointer;
-  margin-left: auto;
-}
-.burger span {
-  display: block; width: 28px; height: 3px;
-  background: #007bff; border-radius: 3px;
-  transition: transform .3s ease, opacity .3s ease;
-}
-/* Animation ≡ → X */
-.burger.open span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
-.burger.open span:nth-child(2){ opacity:0; }
-.burger.open span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+/* 🌐 MENU MOBILE — VERSION FIX (BLEU + POSITION CORRECTE) */
+@media (max-width: 768px) {
 
-/* Mobile */
-@media (max-width:768px){
-  .header-container{ justify-content:space-between; padding:0 20px; }
-  .burger{ display:flex; }
-  nav ul{
-    display:none !important;
-    flex-direction:column; gap:20px;
-    background:#fff; position:absolute; top:85px; right:20px;
-    padding:20px; border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    z-index:9999; min-width:220px;
+  .header-container {
+    justify-content: space-between;
+    padding: 0 20px;
   }
-  nav ul.open{ display:flex !important; }
-  body.menu-open{ overflow:hidden; }
+
+  /* Bouton burger visible sur mobile */
+  .burger {
+    display: flex;
+  }
+
+  /* Menu mobile */
+  nav ul {
+    display: none !important;
+    flex-direction: column;
+    gap: 22px;
+    position: fixed; /* ✅ Au lieu de absolute */
+    top: 70px;       /* ✅ Collé sous le header */
+    right: 15px;
+    background: rgba(255,255,255,0.9); /* ✅ Effet translucide */
+    backdrop-filter: blur(15px);       /* ✅ effet BLUR (style iPhone) */
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    z-index: 9999;
+    min-width: 240px;
+    animation: fadeInMenu .25s ease;
+  }
+
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Menu ouvert */
+  nav ul.open {
+    display: flex !important;
+  }
+
+  /* Désactive le scroll du body quand menu ouvert */
+  body.menu-open {
+    overflow: hidden;
+  }
 }
