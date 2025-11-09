@@ -8,14 +8,18 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-<!-- 🌐 HEADER -->
 <header>
   <div class="header-container">
-    <img src="Images/logo.png" alt="Logo WebNova" class="logo"/>
+    <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
     <h1>WebNova</h1>
+
+    <!-- Bouton burger -->
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+      &#9776;
+    </button>
   </div>
-  <nav>
+
+  <nav id="main-nav">
     <ul>
       <li><a class="active" href="index.html">Accueil</a></li>
       <li><a href="apropos.html">À propos</a></li>
@@ -26,6 +30,7 @@
     </ul>
   </nav>
 </header>
+
 
 <!-- 🖼️ BANNIÈRE -->
 <section class="hero-banner">

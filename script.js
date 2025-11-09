@@ -29,9 +29,26 @@ const io = new IntersectionObserver(entries => {
 
 observed.forEach(el => io.observe(el));
 
-const burger = document.querySelector(".burger");
-const navMenu = document.querySelector("nav ul");
 
-burger.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
+// === BURGER MENU (mobile) ===
+const burger = document.querySelector('.burger');
+const navMenu = document.querySelector('nav ul');
+
+function toggleMenu(){
+  const isOpen = navMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  document.body.classList.toggle('menu-open', isOpen);
+}
+
+if (burger && navMenu){
+  burger.addEventListener('click', toggleMenu);
+
+  // Fermer le menu quand on clique sur un lien
+  navMenu.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      navMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+}
