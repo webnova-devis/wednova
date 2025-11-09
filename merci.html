@@ -4,57 +4,53 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Merci - WebNova</title>
+  <meta name="description" content="Merci pour votre message — WebNova">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
 <header>
   <div class="header-container">
     <img src="Images/logo.png" alt="Logo WebNova" class="logo"/>
     <h1>WebNova</h1>
-
-    <!-- ✅ Burger -->
     <button class="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-
   <nav>
     <ul>
-      <li><a class="active" href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a class="" href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+      <li><a class="" href="apropos.html"><i class="fa-solid fa-user"></i> À propos</a></li>
+      <li><a class="" href="services.html"><i class="fa-solid fa-gear"></i> Services</a></li>
+      <li><a class="" href="projets.html"><i class="fa-solid fa-diagram-project"></i> Projets</a></li>
+      <li><a class="" href="tarifs.html"><i class="fa-solid fa-tags"></i> Tarifs</a></li>
+      <li><a class="" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 </header>
-
-<!-- ✅ overlay noir -->
 <div class="overlay"></div>
 
+<section class="hero-banner small-banner">
+  <div class="banner-text">
+    <h2>Merci pour votre message 💙</h2>
+    <p>Nous revenons vers vous très vite.</p>
+    <a class="btn" href="index.html">Retour à l’accueil</a>
+  </div>
+</section>
 
-  <section class="hero-banner small-banner">
-    <div class="banner-text">
-      <h2>Merci pour votre message 💙</h2>
-      <p>Nous revenons vers vous très vite.</p>
-      <a class="btn" href="index.html">Retour à l’accueil</a>
-    </div>
-  </section>
+<section id="hero" class="fade-in">
+  <h2>Votre projet est entre de bonnes mains</h2>
+  <p>En attendant notre réponse, découvrez nos services et nos tarifs.</p>
+  <div style="margin-top:18px">
+    <a class="btn" href="services.html">Voir les services</a>
+    <a class="btn" href="tarifs.html" style="margin-left:8px">Voir les tarifs</a>
+  </div>
+</section>
 
-  <section id="hero" class="fade-in">
-    <h2>Votre projet est entre de bonnes mains</h2>
-    <p>En attendant notre réponse, découvrez nos services et nos tarifs.</p>
-    <div style="margin-top:18px">
-      <a class="btn" href="services.html">Voir les services</a>
-      <a class="btn" href="tarifs.html" style="margin-left:8px">Voir les tarifs</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 WebNova - Tous droits réservés</p>
-  </footer>
-  <script src="script.js"></script>
+<footer>
+  <p>&copy; 2025 WebNova - Tous droits réservés</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -5,57 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projets - WebNova</title>
   <meta name="description" content="Exemples de réalisations WebNova : études de cas et projets livrés.">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
 <header>
   <div class="header-container">
     <img src="Images/logo.png" alt="Logo WebNova" class="logo"/>
     <h1>WebNova</h1>
-
-    <!-- ✅ Burger -->
     <button class="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-
   <nav>
     <ul>
-      <li><a class="active" href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a class="" href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+      <li><a class="" href="apropos.html"><i class="fa-solid fa-user"></i> À propos</a></li>
+      <li><a class="" href="services.html"><i class="fa-solid fa-gear"></i> Services</a></li>
+      <li><a class="active" href="projets.html"><i class="fa-solid fa-diagram-project"></i> Projets</a></li>
+      <li><a class="" href="tarifs.html"><i class="fa-solid fa-tags"></i> Tarifs</a></li>
+      <li><a class="" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 </header>
-
-<!-- ✅ overlay noir -->
 <div class="overlay"></div>
 
+<section class="hero-banner small-banner">
+  <div class="banner-text">
+    <h2>Réalisations</h2>
+    <p>Quelques études de cas (sans images)</p>
+  </div>
+</section>
 
-  <section class="hero-banner small-banner">
-    <div class="banner-text">
-      <h2>Réalisations</h2>
-      <p>Quelques études de cas (sans images)</p>
-    </div>
-  </section>
+<section class="fade-in">
+  <h2>Études de cas</h2>
+  <div class="cards">
+    <div class="card project"><h3>Vitrine artisan</h3><p>SEO local, prise de contact, Google Maps.</p></div>
+    <div class="card project"><h3>Association</h3><p>Agenda, actualités, page de dons.</p></div>
+    <div class="card project"><h3>Portfolio créatif</h3><p>Mise en valeur, blog, performance A.</p></div>
+    <div class="card project"><h3>E-commerce local</h3><p>Catalogue, panier, paiement sécurisé.</p></div>
+  </div>
+</section>
 
-  <section class="fade-in">
-    <h2>Études de cas</h2>
-    <div class="cards">
-      <div class="card project"><h3>Vitrine artisan</h3><p>SEO local, prise de contact, Google Maps.</p></div>
-      <div class="card project"><h3>Association</h3><p>Agenda, actualités, page de dons.</p></div>
-      <div class="card project"><h3>Portfolio créatif</h3><p>Mise en valeur, blog, performance A.</p></div>
-      <div class="card project"><h3>E-commerce local</h3><p>Catalogue, panier, paiement sécurisé.</p></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 WebNova - Tous droits réservés</p>
-  </footer>
-  <script src="script.js"></script>
+<footer>
+  <p>&copy; 2025 WebNova - Tous droits réservés</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
