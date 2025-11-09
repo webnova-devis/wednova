@@ -1,5 +1,5 @@
 /* ================================
-   💙 WEBNOVA — THEME BLEU PROFESSIONNEL
+   💙 WEBNOVA — THEME BLEU PREMIUM
    ================================ */
 
 /* RESET */
@@ -25,7 +25,7 @@ nav ul li a { color:white; font-weight:600; position:relative; }
 nav ul li a::after { content:""; position:absolute; left:0; bottom:-5px; width:0; height:2px; background:#3498db; transition:width .3s; }
 nav ul li a:hover::after, nav ul li a.active::after { width:100%; }
 
-/* HERO BANNER */
+/* HERO */
 .hero-banner {
   position:relative; height:700px; overflow:hidden;
   display:flex; align-items:center; justify-content:center; text-align:center; color:white;
@@ -48,130 +48,76 @@ nav ul li a:hover::after, nav ul li a.active::after { width:100%; }
 
 /* SECTIONS */
 section { padding:90px 20px; max-width:1200px; margin:auto; }
-#hero {
-  background:linear-gradient(135deg,#007bff,#004aad); color:white;
-  padding:100px 30px; border-radius:20px; text-align:center; margin-top:100px;
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-
-/* CARDS */
-.cards { display:flex; flex-wrap:wrap; gap:35px; justify-content:center; }
-.card {
-  background:#fff; border-radius:15px; padding:30px; width:290px; text-align:center;
-  box-shadow:0 8px 20px rgba(0,0,0,.08); transition:transform .3s, box-shadow .3s;
-}
-.card:hover { transform:translateY(-10px); box-shadow:0 14px 28px rgba(0,0,0,.15); }
-.card h3 { color:#007bff; margin-bottom:12px; }
-.price { font-size:2rem; font-weight:700; color:#0077ff; margin:10px 0 6px; }
-.tarif-card.highlight { background:linear-gradient(135deg,#0077ff,#00bcd4); color:#fff; }
-.tarif-card.highlight .btn { background:#fff; color:#0077ff; }
-
-/* ABOUT */
-.about-section { text-align:center; }
-.about-section h2 { font-size:2.4rem; color:#007bff; margin-bottom:20px; }
-.about-values { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:25px; margin-top:30px; }
-.value-card { background:#fff; padding:28px 22px; border-radius:15px; box-shadow:0 10px 26px rgba(0,0,0,.06); border-top:5px solid #007bff; transition:all .35s; }
-.value-card:hover { transform:translateY(-8px); box-shadow:0 15px 36px rgba(0,0,0,.1); border-top-color:#00bcd4; }
-.about-call { margin-top:50px; background:linear-gradient(135deg,#007bff,#00bcd4); color:#fff; padding:50px 20px; border-radius:20px; }
-
-/* SERVICES */
-.services { text-align:center; padding:100px 20px; }
-.services .intro { max-width:700px; margin:0 auto 50px; font-size:1.1rem; color:#444; }
-.service-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; }
-.service-card {
-  background:#fff; padding:35px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.08);
-  width:280px; text-align:left; transition: transform .3s ease, box-shadow .3s ease;
-}
-.service-card:hover { transform:translateY(-10px); box-shadow:0 12px 30px rgba(0,0,0,0.12); }
-.service-card h3 { color:#007bff; margin-bottom:15px; }
-.service-card p { color:#555; font-size:.95rem; line-height:1.6; }
-.cta { margin-top:60px; }
-
-/* CONTACT */
-.contact-page { padding:80px 20px; }
-.contact-wrapper { display:flex; flex-wrap:wrap; gap:50px; justify-content:space-between; align-items:flex-start; }
-.contact-form, .contact-info {
-  flex:1; min-width:320px; background:#fff; padding:40px; border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08); transition:transform .4s, box-shadow .4s;
-}
-.contact-form:hover, .contact-info:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,.12); }
-.contact-form h3, .contact-info h3 { color:#0077ff; margin-bottom:16px; }
-.contact-form p { color:#566; margin-bottom:18px; }
-.contact-form input, .contact-form textarea {
-  width:100%; padding:12px 14px; margin-bottom:16px; border:2px solid #007bff; border-radius:10px; font-size:1rem; transition:all .25s;
-}
-.contact-form input:focus, .contact-form textarea:focus { border-color:#00bcd4; box-shadow:0 0 10px rgba(0,123,255,.2); outline:none; }
-.contact-info ul { list-style:none; margin:0 0 18px 0; padding:0; }
-.contact-info li { margin-bottom:10px; }
-.contact-info strong { color:#0077ff; }
-
-/* FOOTER */
-footer { background:#004aad; color:#fff; text-align:center; padding:25px; font-size:.95rem; margin-top:50px; }
 
 /* ANIMATIONS */
 .fade-in { opacity:0; transform:translateY(30px); transition:opacity .8s ease-out, transform .8s ease-out; }
 .fade-in.visible { opacity:1; transform:translateY(0); }
 
-/* RESPONSIVE tweaks */
-@media (max-width: 950px) {
-  nav ul { flex-wrap:wrap; gap:10px; }
-  .banner-text h2 { font-size:2.2rem; }
-  .banner-text p { font-size:1rem; }
-  .contact-wrapper { flex-direction:column; align-items:center; }
-  .contact-form, .contact-info { width:100%; max-width:640px; }
+/* 🌙 OVERLAY MENU (NOIR + BLUR) */
+.overlay {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(4px);
+  z-index:9990;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s;
 }
-@media (max-width: 600px) {
-  nav ul { flex-direction:column; gap:10px; }
-  .hero-banner { height:560px; }
-  .hero-banner.small-banner { height:360px; }
-  .banner-text h2 { font-size:1.8rem; }
-  .banner-text p { font-size:.95rem; }
-  .btn { padding:12px 24px; font-size:.95rem; }
+.overlay.show {
+  opacity:1;
+  pointer-events:all;
 }
 
-/* 🌐 MENU MOBILE — VERSION FIX (BLEU + POSITION CORRECTE) */
+/* 🌐 MENU MOBILE */
+.burger {
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:4px;
+  width:40px;
+  height:40px;
+  cursor:pointer;
+  margin-left:auto;
+}
+.burger span {
+  width:100%;
+  height:4px;
+  background:#007bff;
+  border-radius:4px;
+  transition:.3s;
+}
+.burger.open span:nth-child(1) { transform:rotate(45deg) translateY(8px); }
+.burger.open span:nth-child(2) { opacity:0; }
+.burger.open span:nth-child(3) { transform:rotate(-45deg) translateY(-8px); }
+
+/* VERSION MOBILE */
 @media (max-width: 768px) {
 
-  .header-container {
-    justify-content: space-between;
-    padding: 0 20px;
-  }
+  .header-container { justify-content:space-between; padding:0 20px; }
 
-  /* Bouton burger visible sur mobile */
-  .burger {
-    display: flex;
-  }
-
-  /* Menu mobile */
   nav ul {
-    display: none !important;
-    flex-direction: column;
-    gap: 22px;
-    position: fixed; /* ✅ Au lieu de absolute */
-    top: 70px;       /* ✅ Collé sous le header */
-    right: 15px;
-    background: rgba(255,255,255,0.9); /* ✅ Effet translucide */
-    backdrop-filter: blur(15px);       /* ✅ effet BLUR (style iPhone) */
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
-    z-index: 9999;
-    min-width: 240px;
-    animation: fadeInMenu .25s ease;
+    display:none !important;
+    flex-direction:column;
+    gap:22px;
+    position:fixed;
+    top:70px;
+    right:20px;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.25);
+    z-index:9999;
+    min-width:240px;
   }
 
-  @keyframes fadeInMenu {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: translateY(0); }
+  nav ul.open { display:flex !important; }
+
+  nav ul li a {
+    color:#007bff !important;
+    font-weight:600;
   }
 
-  /* Menu ouvert */
-  nav ul.open {
-    display: flex !important;
-  }
-
-  /* Désactive le scroll du body quand menu ouvert */
-  body.menu-open {
-    overflow: hidden;
-  }
+  .burger { display:flex; }
+  body.menu-open { overflow:hidden; }
 }

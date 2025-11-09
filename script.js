@@ -1,54 +1,37 @@
-// === Effet zoom / parallax sur la bannière ===
-window.addEventListener('scroll', () => {
-  const banner = document.querySelector('.banner-img');
-  const y = window.scrollY || window.pageYOffset;
-  if (banner) {
-    const scale = 1 + Math.min(y / 2000, 0.35);
-    banner.style.transform = `scale(${scale}) translateY(${y / 6}px)`;
-  }
+// === Effet parallax bannière ===
+window.addEventListener("scroll", () => {
+  const banner = document.querySelector(".banner-img");
+  if (!banner) return;
+  const y = window.scrollY;
+  banner.style.transform = `scale(${1 + y / 2000}) translateY(${y / 6}px)`;
 });
 
-// === Header transparent -> bleu au scroll ===
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (!header) return;
-  if (window.scrollY > 50) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
+// === Header transparent -> bleu ===
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) header.classList.add("scrolled");
+  else header.classList.remove("scrolled");
 });
 
-// === Animations d’apparition (fade-in) ===
-const observed = document.querySelectorAll('.fade-in, .value-card, .card, .project, .tarif-card');
+// === Animations apparition ===
+const fadeEls = document.querySelectorAll(".fade-in");
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      io.unobserve(e.target);
-    }
-  });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.2 });
-observed.forEach(el => io.observe(el));
+fadeEls.forEach(el => io.observe(el));
 
-// === BURGER MENU (mobile + animation X) ===
-const burger = document.querySelector('.burger');
-const navMenu = document.querySelector('nav ul');
+// === MENU BURGER + OVERLAY ===
+const burger = document.querySelector(".burger");
+const navMenu = document.querySelector("nav ul");
+const overlay = document.querySelector(".overlay");
 
-function toggleMenu(){
-  const isOpen = navMenu.classList.toggle('open');
-  burger.classList.toggle('open'); // animation ≡ → X
-  burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  document.body.classList.toggle('menu-open', isOpen);
+function toggleMenu() {
+  const isOpen = navMenu.classList.toggle("open");
+  burger.classList.toggle("open");
+  overlay.classList.toggle("show", isOpen);
+  document.body.classList.toggle("menu-open", isOpen);
 }
 
-if (burger && navMenu){
-  burger.addEventListener('click', toggleMenu);
-
-  // Fermer le menu quand on clique sur un lien
-  navMenu.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=>{
-      navMenu.classList.remove('open');
-      burger.classList.remove('open');
-      document.body.classList.remove('menu-open');
-      burger.setAttribute('aria-expanded','false');
-    });
-  });
-}
+burger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
+navMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", toggleMenu));
