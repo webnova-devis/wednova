@@ -8,50 +8,47 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header>
-  <div class="header-container">
-    <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
-    <h1>WebNova</h1>
 
-    <!-- Bouton burger -->
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-      &#9776;
-    </button>
-  </div>
+  <header>
+    <div class="header-container">
+      <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
+      <h1>WebNova</h1>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="projets.html">Projets</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav id="main-nav">
-    <ul>
-      <li><a class="active" href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <section class="hero-banner small-banner">
+    <div class="banner-text">
+      <h2>Réalisations</h2>
+      <p>Quelques études de cas (sans images)</p>
+    </div>
+  </section>
 
+  <section class="fade-in">
+    <h2>Études de cas</h2>
+    <div class="cards">
+      <div class="card project"><h3>Vitrine artisan</h3><p>SEO local, prise de contact, Google Maps.</p></div>
+      <div class="card project"><h3>Association</h3><p>Agenda, actualités, page de dons.</p></div>
+      <div class="card project"><h3>Portfolio créatif</h3><p>Mise en valeur, blog, performance A.</p></div>
+      <div class="card project"><h3>E-commerce local</h3><p>Catalogue, panier, paiement sécurisé.</p></div>
+    </div>
+  </section>
 
-<section class="hero-banner small-banner">
-  <div class="banner-text">
-    <h2>Réalisations</h2>
-    <p>Quelques études de cas (sans images)</p>
-  </div>
-</section>
-
-<section class="fade-in">
-  <h2>Études de cas</h2>
-  <div class="cards">
-    <div class="card project"><h3>Vitrine artisan</h3><p>SEO local, prise de contact, Google Maps.</p></div>
-    <div class="card project"><h3>Association</h3><p>Agenda, actualités, page de dons.</p></div>
-    <div class="card project"><h3>Portfolio créatif</h3><p>Mise en valeur, blog, performance A.</p></div>
-    <div class="card project"><h3>E-commerce local</h3><p>Catalogue, panier, paiement sécurisé.</p></div>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 WebNova - Tous droits réservés</p>
-</footer>
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 WebNova - Tous droits réservés</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

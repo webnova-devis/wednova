@@ -74,7 +74,7 @@ section { padding:90px 20px; max-width:1200px; margin:auto; }
 .value-card:hover { transform:translateY(-8px); box-shadow:0 15px 36px rgba(0,0,0,.1); border-top-color:#00bcd4; }
 .about-call { margin-top:50px; background:linear-gradient(135deg,#007bff,#00bcd4); color:#fff; padding:50px 20px; border-radius:20px; }
 
-/* SERVICES PAGE */
+/* SERVICES */
 .services { text-align:center; padding:100px 20px; }
 .services .intro { max-width:700px; margin:0 auto 50px; font-size:1.1rem; color:#444; }
 .service-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; }
@@ -112,7 +112,7 @@ footer { background:#004aad; color:#fff; text-align:center; padding:25px; font-s
 .fade-in { opacity:0; transform:translateY(30px); transition:opacity .8s ease-out, transform .8s ease-out; }
 .fade-in.visible { opacity:1; transform:translateY(0); }
 
-/* RESPONSIVE */
+/* RESPONSIVE tweaks */
 @media (max-width: 950px) {
   nav ul { flex-wrap:wrap; gap:10px; }
   .banner-text h2 { font-size:2.2rem; }
@@ -128,44 +128,40 @@ footer { background:#004aad; color:#fff; text-align:center; padding:25px; font-s
   .banner-text p { font-size:.95rem; }
   .btn { padding:12px 24px; font-size:.95rem; }
 }
-/* 🌐 MENU MOBILE */
+
+/* 🌐 MENU MOBILE — VERSION FINALE (bleu) */
 .burger {
   display: none;
-  font-size: 32px;
-  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 40px; height: 40px;
+  background: transparent; border: 0; cursor: pointer;
   margin-left: auto;
-  padding: 5px 15px;
-  user-select: none;
-  color: white;
 }
+.burger span {
+  display: block; width: 28px; height: 3px;
+  background: #007bff; border-radius: 3px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+/* Animation ≡ → X */
+.burger.open span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
 
-/* VERSION MOBILE */
-@media (max-width: 768px) {
-
-  .header-container {
-    justify-content: space-between;
-    padding: 0 20px;
+/* Mobile */
+@media (max-width:768px){
+  .header-container{ justify-content:space-between; padding:0 20px; }
+  .burger{ display:flex; }
+  nav ul{
+    display:none !important;
+    flex-direction:column; gap:20px;
+    background:#fff; position:absolute; top:85px; right:20px;
+    padding:20px; border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:9999; min-width:220px;
   }
-
-  nav ul {
-    display: none !important;
-    flex-direction: column;
-    gap: 20px;
-    background: white;
-    position: absolute;
-    top: 85px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-    z-index: 9999;
-  }
-
-  nav ul.open {
-    display: flex !important;
-  }
-
-  .burger {
-    display: block;
-  }
+  nav ul.open{ display:flex !important; }
+  body.menu-open{ overflow:hidden; }
 }

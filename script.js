@@ -26,16 +26,15 @@ const io = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.2 });
-
 observed.forEach(el => io.observe(el));
 
-
-// === BURGER MENU (mobile) ===
+// === BURGER MENU (mobile + animation X) ===
 const burger = document.querySelector('.burger');
 const navMenu = document.querySelector('nav ul');
 
 function toggleMenu(){
   const isOpen = navMenu.classList.toggle('open');
+  burger.classList.toggle('open'); // animation ≡ → X
   burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   document.body.classList.toggle('menu-open', isOpen);
 }
@@ -47,6 +46,7 @@ if (burger && navMenu){
   navMenu.querySelectorAll('a').forEach(a=>{
     a.addEventListener('click', ()=>{
       navMenu.classList.remove('open');
+      burger.classList.remove('open');
       document.body.classList.remove('menu-open');
       burger.setAttribute('aria-expanded','false');
     });

@@ -7,50 +7,47 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header>
-  <div class="header-container">
-    <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
-    <h1>WebNova</h1>
 
-    <!-- Bouton burger -->
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-      &#9776;
-    </button>
-  </div>
+  <header>
+    <div class="header-container">
+      <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
+      <h1>WebNova</h1>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav id="main-nav">
-    <ul>
-      <li><a class="active" href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <section class="hero-banner small-banner">
+    <div class="banner-text">
+      <h2>Merci pour votre message 💙</h2>
+      <p>Nous revenons vers vous très vite.</p>
+      <a class="btn" href="index.html">Retour à l’accueil</a>
+    </div>
+  </section>
 
+  <section id="hero" class="fade-in">
+    <h2>Votre projet est entre de bonnes mains</h2>
+    <p>En attendant notre réponse, découvrez nos services et nos tarifs.</p>
+    <div style="margin-top:18px">
+      <a class="btn" href="services.html">Voir les services</a>
+      <a class="btn" href="tarifs.html" style="margin-left:8px">Voir les tarifs</a>
+    </div>
+  </section>
 
-<section class="hero-banner small-banner">
-  <div class="banner-text">
-    <h2>Merci pour votre message 💙</h2>
-    <p>Nous revenons vers vous très vite.</p>
-    <a class="btn" href="index.html">Retour à l’accueil</a>
-  </div>
-</section>
-
-<section id="hero" class="fade-in">
-  <h2>Votre projet est entre de bonnes mains</h2>
-  <p>En attendant notre réponse, découvrez nos services et nos tarifs.</p>
-  <div style="margin-top:18px">
-    <a class="btn" href="services.html">Voir les services</a>
-    <a class="btn" href="tarifs.html" style="margin-left:8px">Voir les tarifs</a>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 WebNova - Tous droits réservés</p>
-</footer>
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 WebNova - Tous droits réservés</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

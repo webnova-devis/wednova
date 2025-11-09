@@ -8,71 +8,68 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header>
-  <div class="header-container">
-    <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
-    <h1>WebNova</h1>
 
-    <!-- Bouton burger -->
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-      &#9776;
-    </button>
-  </div>
+  <header>
+    <div class="header-container">
+      <img src="Images/logo.png" alt="Logo WebNova" class="logo" />
+      <h1>WebNova</h1>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a class="active" href="services.html">Services</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav id="main-nav">
-    <ul>
-      <li><a class="active" href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <section class="hero-banner small-banner">
+    <div class="banner-text">
+      <h2>Nos Services</h2>
+      <p>Des solutions web sur mesure et performantes</p>
+    </div>
+  </section>
 
-
-<section class="hero-banner small-banner">
-  <div class="banner-text">
+  <section class="services fade-in">
     <h2>Nos Services</h2>
-    <p>Des solutions web sur mesure et performantes</p>
-  </div>
-</section>
+    <p class="intro">
+      Chez <strong>WebNova</strong>, nous créons des sites modernes, rapides et adaptés à vos besoins.
+      Que vous soyez entrepreneur, artiste ou entreprise, nous donnons vie à vos projets digitaux.
+    </p>
 
-<section class="services fade-in">
-  <h2>Nos Services</h2>
-  <p class="intro">
-    Chez <strong>WebNova</strong>, nous créons des sites modernes, rapides et adaptés à vos besoins.  
-    Que vous soyez entrepreneur, artiste ou entreprise, nous donnons vie à vos projets digitaux.
-  </p>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>💼 Site vitrine professionnel</h3>
+        <p>Présentez votre activité avec élégance grâce à un site clair, responsive et performant.</p>
+      </div>
+      <div class="service-card">
+        <h3>🛒 Site e-commerce</h3>
+        <p>Boostez vos ventes avec une boutique en ligne moderne, sécurisée et simple à gérer.</p>
+      </div>
+      <div class="service-card">
+        <h3>🎨 Refonte & optimisation</h3>
+        <p>Design, vitesse et référencement : on modernise et on optimise votre site.</p>
+      </div>
+      <div class="service-card">
+        <h3>⚙️ Maintenance & support</h3>
+        <p>Mises à jour, sécurité, sauvegardes, assistance — on s’occupe de tout.</p>
+      </div>
+    </div>
 
-  <div class="service-grid">
-    <div class="service-card">
-      <h3>💼 Site vitrine professionnel</h3>
-      <p>Présentez votre activité avec élégance grâce à un site clair, responsive et performant.</p>
+    <div class="cta">
+      <a href="tarifs.html" class="btn">Voir nos tarifs</a>
     </div>
-    <div class="service-card">
-      <h3>🛒 Site e-commerce</h3>
-      <p>Boostez vos ventes avec une boutique en ligne moderne, sécurisée et simple à gérer.</p>
-    </div>
-    <div class="service-card">
-      <h3>🎨 Refonte & optimisation</h3>
-      <p>Design, vitesse et référencement : on modernise et on optimise votre site.</p>
-    </div>
-    <div class="service-card">
-      <h3>⚙️ Maintenance & support</h3>
-      <p>Mises à jour, sécurité, sauvegardes, assistance — on s’occupe de tout.</p>
-    </div>
-  </div>
+  </section>
 
-  <div class="cta">
-    <a href="tarifs.html" class="btn">Voir nos tarifs</a>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 WebNova - Tous droits réservés</p>
-</footer>
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 WebNova - Tous droits réservés</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
