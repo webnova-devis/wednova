@@ -29,7 +29,12 @@
     </ul>
   </nav>
 </header>
-<div class="overlay"></div>
+const overlay = document.querySelector('.overlay');
+
+burger.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+  overlay.classList.toggle("show");
+});
 
 <section class="hero-banner">
   <img src="images/banner-webnova.png" alt="Bannière WebNova" class="banner-img"/>
