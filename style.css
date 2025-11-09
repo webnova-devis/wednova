@@ -128,3 +128,44 @@ footer { background:#004aad; color:#fff; text-align:center; padding:25px; font-s
   .banner-text p { font-size:.95rem; }
   .btn { padding:12px 24px; font-size:.95rem; }
 }
+/* 🌐 MENU MOBILE */
+.burger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 5px 15px;
+  user-select: none;
+  color: white;
+}
+
+/* VERSION MOBILE */
+@media (max-width: 768px) {
+
+  .header-container {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  nav ul {
+    display: none !important;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    position: absolute;
+    top: 85px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+  }
+
+  nav ul.open {
+    display: flex !important;
+  }
+
+  .burger {
+    display: block;
+  }
+}
