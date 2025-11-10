@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - WebNova | Création de Sites Web Professionnels</title>
-  <meta name="description" content="Contactez WebNova pour la création de sites modernes, rapides et sur mesure.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO -->
+  <title>Contact - WebNova | Demandez votre Devis Gratuit</title>
+  <meta name="description" content="Contactez WebNova pour créer votre site web moderne et performant. Devis gratuit, réponse rapide et accompagnement personnalisé.">
+  <meta name="keywords" content="contact WebNova, devis site web, création site internet, demande devis">
+  <link rel="canonical" href="https://webnova-devis.github.io/wednova/contact.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webnova-devis.github.io/wednova/contact.html">
+  <meta property="og:title" content="Contactez WebNova - Devis Gratuit">
+  <meta property="og:description" content="Parlons de votre projet web. Devis gratuit et personnalisé.">
+  
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Header -->
 <header>
   <div class="header-container">
-    <img src="Images/logo.png" alt="Logo WebNova" class="logo"/>
+    <img src="images/logo.png" alt="Logo WebNova" class="logo" loading="lazy">
     <h1>WebNova</h1>
-    <button class="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
+    <button class="burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </div>
-  <nav>
+  <nav aria-label="Navigation principale">
     <ul>
-      <li><a class="" href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
-      <li><a class="" href="apropos.html"><i class="fa-solid fa-user"></i> À propos</a></li>
-      <li><a class="" href="services.html"><i class="fa-solid fa-gear"></i> Services</a></li>
-      <li><a class="" href="projets.html"><i class="fa-solid fa-diagram-project"></i> Projets</a></li>
-      <li><a class="" href="tarifs.html"><i class="fa-solid fa-tags"></i> Tarifs</a></li>
-      <li><a class="active" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+      <li><a href="apropos.html"><i class="fa-solid fa-user"></i> À propos</a></li>
+      <li><a href="services.html"><i class="fa-solid fa-gear"></i> Services</a></li>
+      <li><a href="projets.html"><i class="fa-solid fa-diagram-project"></i> Projets</a></li>
+      <li><a href="tarifs.html"><i class="fa-solid fa-tags"></i> Tarifs</a></li>
+      <li><a class="active" href="contact.html" aria-current="page"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 </header>
-const overlay = document.querySelector('.overlay');
+<!-- FIN HEADER (CORRECTIF : balise fermante ajoutée) -->
 
-burger.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-  overlay.classList.toggle("show");
-});
-
+<!-- Hero Banner -->
 <section class="hero-banner small-banner">
   <div class="banner-text">
     <h2>Contactez WebNova</h2>
@@ -43,39 +60,120 @@ burger.addEventListener("click", () => {
   </div>
 </section>
 
+<!-- Section Contact -->
 <section class="contact-page fade-in">
   <div class="contact-wrapper">
+    
+    <!-- Formulaire de contact -->
     <div class="contact-form">
       <h3>💬 Envoyez-nous un message</h3>
-      <p>Vous avez un projet, une idée ou une question ? Dites-nous tout :</p>
-      <form action="https://formspree.io/f/mldpkdgz" method="POST">
-        <input type="text" name="nom" placeholder="Votre nom" required/>
-        <input type="email" name="email" placeholder="Votre adresse e-mail" required/>
-        <input type="text" name="sujet" placeholder="Sujet" required/>
-        <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
-        <input type="hidden" name="_next" value="https://webnova-devis.github.io/wednova/merci.html"/>
-        <button type="submit" class="btn">Envoyer le message</button>
+      <p>Vous avez un projet, une idée ou une question ? Dites-nous tout, nous vous répondons rapidement :</p>
+      
+      <form action="https://formspree.io/f/mldpkdgz" method="POST" novalidate>
+        <input 
+          type="text" 
+          name="nom" 
+          placeholder="Votre nom complet" 
+          required 
+          aria-required="true"
+          aria-label="Nom complet"
+        >
+        
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Votre adresse e-mail" 
+          required 
+          aria-required="true"
+          aria-label="Adresse e-mail"
+        >
+        
+        <input 
+          type="text" 
+          name="sujet" 
+          placeholder="Sujet de votre message" 
+          required 
+          aria-required="true"
+          aria-label="Sujet"
+        >
+        
+        <textarea 
+          name="message" 
+          rows="6" 
+          placeholder="Décrivez-nous votre projet ou posez votre question..." 
+          required 
+          aria-required="true"
+          aria-label="Votre message"
+        ></textarea>
+        
+        <!-- Redirection après soumission -->
+        <input type="hidden" name="_next" value="https://webnova-devis.github.io/wednova/merci.html">
+        
+        <!-- Honeypot (anti-spam) -->
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <button type="submit" class="btn">
+          <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+        </button>
       </form>
     </div>
 
+    <!-- Informations de contact -->
     <div class="contact-info">
       <h3>📍 Nos coordonnées</h3>
       <ul>
-        <li><strong>Adresse :</strong> 83220 Le Pradet, France</li>
-        <li><strong>Téléphone :</strong> 07 66 61 72 64</li>
-        <li><strong>Email :</strong> webnova83@gmail.com</li>
-        <li><strong>Horaires :</strong> Lun–Ven : 09h–18h</li>
+        <li>
+          <i class="fa-solid fa-location-dot" style="color: #007bff; margin-right: 10px;"></i>
+          <strong>Adresse :</strong> 83220 Le Pradet, France
+        </li>
+        <li>
+          <i class="fa-solid fa-phone" style="color: #007bff; margin-right: 10px;"></i>
+          <strong>Téléphone :</strong> <a href="tel:+33766617264" style="color: #007bff;">07 66 61 72 64</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-envelope" style="color: #007bff; margin-right: 10px;"></i>
+          <strong>Email :</strong> <a href="mailto:webnova83@gmail.com" style="color: #007bff;">webnova83@gmail.com</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-clock" style="color: #007bff; margin-right: 10px;"></i>
+          <strong>Horaires :</strong> Lun–Ven : 09h–18h
+        </li>
       </ul>
+      
+      <!-- Carte Google Maps -->
       <div class="map">
-        <iframe src="https://www.google.com/maps?q=Le+Pradet+83220&output=embed" width="100%" height="250" style="border:0;border-radius:10px" allowfullscreen loading="lazy"></iframe>
+        <iframe 
+          src="https://www.google.com/maps?q=Le+Pradet+83220&output=embed" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius:10px" 
+          allowfullscreen 
+          loading="lazy"
+          title="Carte de localisation - Le Pradet"
+        ></iframe>
+      </div>
+      
+      <!-- Réseaux sociaux (optionnel) -->
+      <div style="margin-top: 30px; text-align: center;">
+        <h4 style="margin-bottom: 15px; color: #004aad;">Suivez-nous</h4>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+          <a href="#" style="font-size: 1.5rem; color: #007bff;" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="font-size: 1.5rem; color: #007bff;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="font-size: 1.5rem; color: #007bff;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
+    
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>&copy; 2025 WebNova - Tous droits réservés</p>
+  <p>&copy; 2025 WebNova - Tous droits réservés | <a href="mailto:webnova83@gmail.com" style="color: white; text-decoration: underline;">webnova83@gmail.com</a></p>
 </footer>
+
+<!-- Scripts -->
 <script src="script.js"></script>
+
 </body>
 </html>
