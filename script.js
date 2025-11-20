@@ -306,7 +306,7 @@ const init = () => {
   initLogoAnimation();
   initPreloader();
 
-  console.log("✅ WebNova - Site initialisé avec succès!");
+  console.log("✅ JV WEB - Site initialisé avec succès!");
 };
 
 // Démarrer quand le DOM est prêt
