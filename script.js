@@ -1,5 +1,5 @@
 // ================================
-// 💙 WEBNOVA - JAVASCRIPT OPTIMISÉ
+//          💙 JV WEB 
 // ================================
 
 // === EFFET PARALLAX BANNIÈRE ===
