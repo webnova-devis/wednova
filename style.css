@@ -1,5 +1,6 @@
 /* =========================================
-                  JV WEB
+   JV WEB — STYLE ULTRA PREMIUM
+   Version Elite avec Animations 3D
    ========================================= */
 
 /* ========== VARIABLES CSS AVANCÉES ========== */
@@ -708,6 +709,7 @@ footer p {
   section {
     page-break-inside: avoid;
   }
+}
 }
 
 .logo::before {
