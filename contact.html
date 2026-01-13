@@ -6,24 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- SEO -->
-  <title>Contact - JV WEB | Demandez votre Devis Gratuit</title>
-  <meta name="description" content="Contactez JV WEB pour créer votre site web moderne et performant. Devis gratuit, réponse rapide et accompagnement personnalisé.">
+  <title>Contact - JV WEB | Devis Gratuit</title>
+  <meta name="description" content="Contactez JV WEB pour créer votre site web moderne et performant. Devis gratuit et réponse rapide.">
   <meta name="keywords" content="contact JV WEB, devis site web, création site internet, demande devis">
-  <link rel="canonical" href="https://JV WEB-devis.github.io/wednova/contact.html">
+  <link rel="canonical" href="https://jvweb-devis.github.io/wednova/contact.html">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://JV WEB-devis.github.io/wednova/contact.html">
+  <meta property="og:url" content="https://jvweb-devis.github.io/wednova/contact.html">
   <meta property="og:title" content="Contactez JV WEB - Devis Gratuit">
   <meta property="og:description" content="Parlons de votre projet web. Devis gratuit et personnalisé.">
   
-  <!-- Preconnect -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://formspree.io">
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  
-  <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
 <!-- Header -->
 <header>
   <div class="header-container">
-    <img src="images/logo.png" alt="Logo JV WEB" class="logo" loading="lazy">
+    <a href="index.html"><img src="images/logo.png" alt="Logo JV WEB - création site web" class="logo" loading="lazy"></a>
     <h1>JV WEB</h1>
     <button class="burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
       <span></span>
@@ -50,126 +50,90 @@
     </ul>
   </nav>
 </header>
-<!-- FIN HEADER (CORRECTIF : balise fermante ajoutée) -->
 
-<!-- Hero Banner -->
-<section class="hero-banner small-banner">
-  <div class="banner-text">
-    <h2>Contactez JV WEB</h2>
-    <p>Créons ensemble votre projet digital</p>
-  </div>
-</section>
+<main>
 
-<!-- Section Contact -->
-<section class="contact-page fade-in">
-  <div class="contact-wrapper">
-    
-    <!-- Formulaire de contact -->
-    <div class="contact-form">
-      <h3>💬 Envoyez-nous un message</h3>
-      <p>Vous avez un projet, une idée ou une question ? Dites-nous tout, nous vous répondons rapidement :</p>
-      
-      <form action="https://formspree.io/f/mldpkdgz" method="POST" novalidate>
-        <input 
-          type="text" 
-          name="nom" 
-          placeholder="Votre nom complet" 
-          required 
-          aria-required="true"
-          aria-label="Nom complet"
-        >
-        
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Votre adresse e-mail" 
-          required 
-          aria-required="true"
-          aria-label="Adresse e-mail"
-        >
-        
-        <input 
-          type="text" 
-          name="sujet" 
-          placeholder="Sujet de votre message" 
-          required 
-          aria-required="true"
-          aria-label="Sujet"
-        >
-        
-        <textarea 
-          name="message" 
-          rows="6" 
-          placeholder="Décrivez-nous votre projet ou posez votre question..." 
-          required 
-          aria-required="true"
-          aria-label="Votre message"
-        ></textarea>
-        
-        <!-- Redirection après soumission -->
-        <input type="hidden" name="_next" value="https://JV WEB-devis.github.io/wednova/merci.html">
-        
-        <!-- Honeypot (anti-spam) -->
-        <input type="text" name="_gotcha" style="display:none">
-        
-        <button type="submit" class="btn">
-          <i class="fa-solid fa-paper-plane"></i> Envoyer le message
-        </button>
-      </form>
+  <!-- Hero Banner -->
+  <section class="hero-banner small-banner">
+    <div class="banner-text">
+      <h1>Contactez JV WEB</h1>
+      <p>Créons ensemble votre projet digital</p>
+      <a href="#contact-form" class="btn-primary">Envoyer un message</a>
     </div>
+  </section>
 
-    <!-- Informations de contact -->
-    <div class="contact-info">
-      <h3>📍 Nos coordonnées</h3>
-      <ul>
-        <li>
-          <i class="fa-solid fa-location-dot" style="color: #007bff; margin-right: 10px;"></i>
-          <strong>Adresse :</strong> 83220 Le Pradet, France
-        </li>
-        <li>
-          <i class="fa-solid fa-phone" style="color: #007bff; margin-right: 10px;"></i>
-          <strong>Téléphone :</strong> <a href="tel:+33766617264" style="color: #007bff;">07 66 61 72 64</a>
-        </li>
-        <li>
-          <i class="fa-solid fa-envelope" style="color: #007bff; margin-right: 10px;"></i>
-          <strong>Email :</strong> <a href="mailto:contact.jvweb@gmail.com" style="color: #007bff;">contact.jvweb@gmail.com</a>
-        </li>
-        <li>
-          <i class="fa-solid fa-clock" style="color: #007bff; margin-right: 10px;"></i>
-          <strong>Horaires :</strong> Lun–Ven : 09h–18h
-        </li>
-      </ul>
-      
-      <!-- Carte Google Maps -->
-      <div class="map">
-        <iframe 
-          src="https://www.google.com/maps?q=Le+Pradet+83220&output=embed" 
-          width="100%" 
-          height="250" 
-          style="border:0; border-radius:10px" 
-          allowfullscreen 
-          loading="lazy"
-          title="Carte de localisation - Le Pradet"
-        ></iframe>
+  <!-- Section Contact -->
+  <section class="contact-page fade-in">
+    <div class="contact-wrapper">
+
+      <!-- Formulaire de contact -->
+      <div class="contact-form" id="contact-form">
+        <h2>💬 Envoyez-nous un message</h2>
+        <p>Vous avez un projet, une idée ou une question ? Dites-nous tout, nous vous répondons rapidement :</p>
+
+        <form action="https://formspree.io/f/mldpkdgz" method="POST" novalidate>
+          <input type="text" name="nom" placeholder="Votre nom complet" required aria-required="true" aria-label="Nom complet">
+          <input type="email" name="email" placeholder="Votre adresse e-mail" required aria-required="true" aria-label="Adresse e-mail">
+          <input type="text" name="sujet" placeholder="Sujet de votre message" required aria-required="true" aria-label="Sujet">
+          <textarea name="message" rows="6" placeholder="Décrivez votre projet ou posez votre question..." required aria-required="true" aria-label="Votre message"></textarea>
+          
+          <!-- Redirection après soumission -->
+          <input type="hidden" name="_next" value="https://jvweb-devis.github.io/wednova/merci.html">
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+          </button>
+        </form>
       </div>
-      
-      <!-- Réseaux sociaux (optionnel) -->
-      <div style="margin-top: 30px; text-align: center;">
-        <h4 style="margin-bottom: 15px; color: #004aad;">Suivez-nous</h4>
-        <div style="display: flex; gap: 15px; justify-content: center;">
-          <a href="#" style="font-size: 1.5rem; color: #007bff;" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" style="font-size: 1.5rem; color: #007bff;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" style="font-size: 1.5rem; color: #007bff;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+
+      <!-- Informations de contact -->
+      <div class="contact-info">
+        <h2>📍 Nos coordonnées</h2>
+        <div class="info-cards">
+          <div class="card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p><strong>Adresse :</strong> 83220 Le Pradet, France</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-phone"></i>
+            <p><strong>Téléphone :</strong> <a href="tel:+33766617264">07 66 61 72 64</a></p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-envelope"></i>
+            <p><strong>Email :</strong> <a href="mailto:contact.jvweb@gmail.com">contact.jvweb@gmail.com</a></p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <p><strong>Horaires :</strong> Lun–Ven : 09h–18h</p>
+          </div>
+        </div>
+
+        <!-- Carte Google Maps -->
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=Le+Pradet+83220&output=embed" width="100%" height="300" style="border:0; border-radius:10px" allowfullscreen loading="lazy" title="Carte de localisation - Le Pradet"></iframe>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="social-media">
+          <h3>Suivez-nous</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
       </div>
+
     </div>
-    
-  </div>
-</section>
+  </section>
+
+</main>
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 JV WEB - Tous droits réservés | <a href="mailto:contact.jvweb@gmail.com" style="color: white; text-decoration: underline;">contact.jvweb@gmail.com</a></p>
+  <p>&copy; 2026 JV WEB - Tous droits réservés | <a href="mailto:contact.jvweb@gmail.com">contact.jvweb@gmail.com</a></p>
 </footer>
 
 <!-- Scripts -->
